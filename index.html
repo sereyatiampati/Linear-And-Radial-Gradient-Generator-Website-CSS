@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>🎨 Css Cool Generator 🎨</title>
+</head>
+<body id="gradient">
+    
+    <div id="main">
+        
+    <h1 id="heading"> CSS GRADIENTS </h1>
+    
+    <button id="lin" onclick="l()">Linear Gradient</button>
+    
+    <button id="rad" onclick="r()">Radial Gradient</button>
+    
+    <button id="h" onclick="help()">Help</button>
+    
+    </div>
+    
+    <div id="linear">
+    
+    <h1 class="heading">Linear Gradient</h1>
+        
+    <input class="color1 inp1" id="c" name="color1" type="color" value="#ff0000"/>
+    
+    <input class="color2 inp2" id="d" name="color2" type="color" value="#ff00ff"/>
+    
+    <h3 id="linH">linear-gradient(to right, rgb(255,0,0) , rgb(255,0,255))</h3>
+    
+    <button id="back" onclick="home()">Go back</button>
+        
+    </div>  
+    
+    <div id="radial">
+    
+        <h1 class="heading">Radial Gradient</h1>
+        
+        <input class="color3 inp1" id="a" name="color1" type="color" value="#ff0000"/>
+    
+    <input class="color4 inp2" name="color2" id="b" type="color" value="#ff00ff"/>
+    
+    <h3 id="radH">radial-gradient(rgb(255,0,0) , rgb(255,0,255))</h3>
+    
+    <button id="back" onclick="home()">Go back</button>
+    
+    </div> 
+    
+    <div id="help">
+    
+        <h1 id="heading">HELP</h1>
+    
+        <div id="content">
+           <p>Hey there!! Hope you all are good.
+           </p> 
+           
+           <p>
+               CSS GRADIENTS are really useful if you want some beautiful color combinations in  your website. I would walk you through the exciting part where I would explain you...
+          <h4 class="sm_h">HOW CSS GRADIENTS WORK???
+          </h4> 
+          So without wasting any more time let's get started. Shall we??? 
+           </p>
+           
+           <p>
+               There are basically 2 types of gradients.
+               <ol>
+                   <li>Linear Gradient</li>
+                   <li>Radial Gradient</li>
+               </ol>
+               Linear Gradient applies the 2 colors in linear/sequential way. While the Radial Gradient applies the colors in circular/elliptical way. For more information try to change the colors for linear as well as radial gradient in the output and see what happens. Believe me its going to be very much fun which you'll like and enjoy.
+           </p>
+           
+           <p>
+              <h4 class="sm_h">HOW THIS WEBSITE WORKS???</h4>  
+           </p>
+           
+           <p>
+                We have made a beautiful website where we have designed a home page. In our home page we have links to the gradients page and help page. In the gradients page by default a beautiful color is already applied. You can change the color by changing the 2 input type colors and you'll see that our page will change the color in the background. Also you will get "rgb" value of the selected colors which you can use directly in your website. Hope that you will enjoy playing with the CSS colors.
+           </p>
+           
+           <p>
+              <h4 class="sm_h">HOW THE CSS GRADIENTS WOULD HELP YOU???</h4>  
+           </p>
+           
+           <p>
+               Whether you are making a huge website or you are just playing around with HTML, CSS or JS, you will need a background color for your website. So, you can use our website as a source for choosing your background color which would be best suited for your website. Along with these you will also learn some good CSS and JS that will enhance your knowledge. Hope you make a great success in your life
+           </p>
+           
+           <h4 class="sm_h">
+               CONCLUSION...
+           </h4>
+           <p>
+               One last thing I want to mention is that if you have learnt something new and exciting then please appreciate my work by upvoting 👍👍👍. Also I would be more than happy to hear any feedback from your side as I will improve this website and optimize it in the future. Hope you guys had a great time. Thank you so much for giving your precious time. Happy Coding.
+           </p>
+        </div>
+        
+        <button id="back" onclick="home()">Go back</button>
+        
+    </div>
+    
+    <script>
+    
+function l()  
+{
+document.getElementById("linH").innerHTML = "linear-gradient(to right, rgb(255,0,0) , rgb(255,0,255))";
+document.getElementById("gradient").style.background = "linear-gradient(to right, rgb(255,0,0) , rgb(255,0,255))";
+document.getElementById("main").style.display = "none"
+document.getElementById("linear").style.display="block";
+
+var css = document.querySelector("#linH");
+var abc = document.querySelector(".color1");
+var def = document.querySelector(".color2");
+var body = document.getElementById("gradient");
+
+abc.addEventListener("input", setLgradient);
+
+def.addEventListener("input", setLgradient);
+
+
+function setLgradient() {
+    body.style.background = 
+    "linear-gradient(to right, " 
+    + abc.value
+    + ", " 
+    + def.value
+    + ")";
+
+    css.textContent = body.style.background + ";";
+}
+}
+
+function r()
+{
+document.getElementById("radH").innerHTML = "linear-gradient(to right, rgb(255,0,0) , rgb(255,0,255))";
+document.getElementById("radial").style.background = "radial-gradient(ellipse ,rgb(255,0,0) , rgb(255,0,255))";
+document.getElementById("main").style.display = "none"
+document.getElementById("radial").style.display="block";
+
+var c = document.querySelector("#radH");
+var x = document.querySelector(".color3");
+var y = document.querySelector(".color4");
+var b = document.getElementById("radial");
+
+x.addEventListener("input", setRgradient);
+
+y.addEventListener("input", setRgradient);
+
+
+function setRgradient() {
+    b.style.background = 
+    "radial-gradient( " 
+    + x.value
+    + ", " 
+    + y.value
+    + ")";
+
+    c.textContent = b.style.background + ";";
+}
+}
+
+
+function home()
+{
+document.getElementById("main").style.display = "block";
+document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.8)";
+document.getElementById("radial").style.display="none";    
+document.getElementById("linear").style.display="none";
+document.getElementById("help").style.display="none";
+document.querySelector(".color1").value = "#ff0000";
+document.querySelector(".color2").value = "#ff00ff";
+document.querySelector(".color3").value = "#ff0000";
+document.querySelector(".color4").value = "#ff00ff";
+}
+
+function help()
+{
+document.getElementById("help").style.display="block"; 
+document.getElementById("main").style.display="none";
+}
+    </script>  
+    
+    </body>
+    
+</html>
